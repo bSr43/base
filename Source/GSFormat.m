@@ -96,7 +96,9 @@
 #ifdef HAVE_WCHAR_H
 #include <wchar.h>
 #else
+#ifndef __WINT_TYPE__
 typedef uint32_t wint_t;
+#endif
 #endif
 #ifdef HAVE_SYS_INTTYPES_H
 #include <sys/inttypes.h>

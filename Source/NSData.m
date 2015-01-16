@@ -1351,7 +1351,7 @@ failure:
       return NO;
     }
 
-#ifdef	HAVE_MKSTEMP
+#if defined(HAVE_MKSTEMP) && !defined(__MINGW__)
   if (useAuxiliaryFile)
     {
       int	desc;
